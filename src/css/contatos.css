@@ -1,0 +1,135 @@
+.contatos-sectionsprincipal {
+  padding: 280px;
+  background-color: #dfb0bc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-pattern-contatos {
+  display: flex;
+  background: linear-gradient(135deg, #ffffff 0%, #fffafa 100%);
+  justify-content: center;
+  border-radius: 15px;
+  gap: 15px;
+}
+
+.sect-contatos {
+  display: flex;
+  gap: 75px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sect-contatos h1 {
+  font-size: 55px;
+  font-family: "Chewy";
+}
+
+.sect-contatos img {
+  width: 500px;
+  height: 600px;
+}
+
+.instagram-btn {
+  background: linear-gradient(
+    45deg,
+    rgb(131, 58, 180),
+    rgb(193, 53, 132),
+    rgb(225, 48, 108),
+    rgb(253, 29, 29),
+    rgb(245, 96, 64),
+    rgb(252, 175, 69)
+  );
+
+  display: flex;
+  margin: 5px;
+  padding: 55px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-family: Roboto;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+  transition: transform 0.9s ease-in-out;
+  text-decoration: none;
+  list-style-type: none;
+  color: rgb(255, 255, 255);
+}
+
+.instagram-btn:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.664);
+  transform: scale(1.2);
+  transition: 2s;
+}
+
+.instagram-btn i{
+    color: #ffffff;
+}
+
+.instagram-btn:active {
+  transform: scale(1);
+}
+
+.whatsapp-btn {
+  background-color: #189100;
+  display: flex;
+  margin: 5px;
+  padding: 55px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-family: Roboto;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.9s ease-in-out;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.whatsapp-btn:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.664);
+  transform: scale(1.2);
+  transition: 2s;
+}
+
+.whatsapp-btn:active {
+  transform: scale(1.1);
+}
+
+.whatsapp-btn i {
+  color: white;
+}
+
+.video-contatos {
+  width: 340px;
+  height: 240px controls= "controls" autoplay= "autoplay" muted;
+  border-radius: 15px;
+}
+
+
+@media only screen and (max-width: 600px){
+      .section-pattern-contatos{
+    flex-direction: column;
+  }
+
+
+  .contatos-sectionsprincipal{
+    padding: 60px 20px;
+  }
+
+  .whatsapp-btn{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .instagram-btn{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,143 @@
+.galeria {
+  padding: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-family: "Chewy", sans-serif;
+}
+
+.galeria h2 {
+  font-size: 50px;
+}
+
+.slideshow {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  display: flex;
+  width: 165%;
+  height: 100%;
+  animation: slide 15s infinite;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Branco transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.slide:hover .overlay {
+  opacity: 1;
+}
+
+.heart-container {
+  pointer-events: auto;
+}
+
+.heart {
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.heart:hover {
+  transform: scale(1.1);
+}
+
+.heart.active {
+  color: #ff0055;
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5%);
+  }
+
+  50% {
+    transform: translateX(-20%);
+  }
+
+  75% {
+    transform: translateX(-38.9%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.section-galerias {
+  background: linear-gradient(115deg, #dfb0bc 5%, #fffafa 100%);
+  width: 320px;
+  height: 375px;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 2px 8px 9px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  gap: 45px;
+  text-align: justify;
+}
+
+.section-galerias-text {
+  margin-left: 15px;
+}
+
+.section-galerias img {
+  width: 320px;
+  height: 170px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.section-galerias-geral{
+  display: grid;
+}
