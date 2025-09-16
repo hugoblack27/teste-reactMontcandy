@@ -5,8 +5,8 @@ import Galeria from './components/galeria';
 function App() {
   return (
     <div>
-{/* <Contats/> */}
 <Galeria/>
+<Contats/>
  
     </div>
     )
