@@ -137,12 +137,13 @@
   background: linear-gradient(115deg, #dfb0bc 5%, #fffafa 100%);
   width: 320px;
   height: 375px;
-  display: flex;
+  display: grid;
   border-radius: 15px;
   box-shadow: 2px 8px 9px rgba(0, 0, 0, 0.4);
   flex-direction: column;
   gap: 45px;
   text-align: justify;
+  overflow: hidden;
 }
 
 .section-galerias-text {
@@ -156,11 +157,20 @@
   object-fit: cover;
 }
 
-.section-galerias-geral{
-display: grid;
-grid-template-columns: auto;
+.row>*{
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .img-cover {
   object-fit: cover;
+}
+
+.section-galerias-geral{
+        display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      grid-gap: 70px;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 16px;
 }

@@ -10,152 +10,103 @@ import brigadeiro8 from "../img/brigadeiros 8.jpg";
 import brigadeiro9 from "../img/brigadeiro 9.jpg";
 import docesentregas from "../img/doces-entrega.jpg";
 import docesfestas from "../img/doces-festas.jpg";
+import { useEffect, useState } from "react";
 
 function Galeria() {
+   const slides = [
+    { src: brigadeiro1, alt: "Brigadeiro 1" },
+    { src: brigadeiro2, alt: "Brigadeiro 2" },
+    { src: brigadeiro3, alt: "Brigadeiro 3" },
+    { src: brigadeiro4, alt: "Brigadeiro 4" },
+    { src: brigadeiro5, alt: "Brigadeiro 5" },
+    { src: brigadeiro6, alt: "Brigadeiro 6" },
+    { src: brigadeiro7, alt: "Brigadeiro 7" },
+    { src: brigadeiro8, alt: "Brigadeiro 8" },
+    { src: brigadeiro9, alt: "Brigadeiro 9" },
+  ];
+  // Estado que guarda os alts das imagens favoritas
+  const [favorites, setFavorites] = useState({});
+  // Ao montar, carrega favoritos do localStorage
+  useEffect(() => {
+    const favs = {};
+    slides.forEach(({ alt }) => {
+      if (localStorage.getItem(alt)) {
+        favs[alt] = true;
+      }
+    });
+    setFavorites(favs);
+  }, []);
+  // Função para alternar favorito
+  function toggleHeart(alt) {
+    setFavorites((prev) => {
+      const newFavorites = { ...prev };
+      if (newFavorites[alt]) {
+        delete newFavorites[alt];
+        localStorage.removeItem(alt);
+      } else {
+        newFavorites[alt] = true;
+        localStorage.setItem(alt, "favorito");
+      }
+      return newFavorites;
+    });
+  }
   return (
     <div>
-      <section class="galeria" id="galeria">
-        <h2 class="galeria-escrita"> Galeria</h2>
-        <section class="section-pattern rounded-4 p-4 p-md-5 container-fluid w-100 shadow">
-          <section class="slideshow">
-            <div class="slides">
-              <div class="slide">
-                <img src={brigadeiro1} alt="" />
-
-                <div class="overlay">
-                  <div class="heart-container">
-                    <i
-                      class="fas fa-heart heart"
-                      onclick="toggleHeart(this)"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slide">
-                <img src={brigadeiro2} alt="" />
-                <div class="overlay">
-                  <div class="heart-container">
-                    <i
-                      class="fas fa-heart heart"
-                      onclick="toggleHeart(this)"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slide">
-                <img src={brigadeiro3} alt="" />
-                <div class="overlay">
-                  <div class="heart-container">
-                    <div class="heart-container">
-                      <i
-                        class="fas fa-heart heart"
-                        onclick="toggleHeart(this)"
-                      ></i>
+      <section className="galeria" id="galeria">
+        <h2 className="galeria-escrita">Galeria</h2>
+        <section className="section-pattern rounded-4 p-4 p-md-5 container-fluid w-100 shadow">
+          <section className="slideshow">
+            <div className="slides">
+              {slides.map(({ src, alt }) => {
+                const isActive = favorites[alt];
+                return (
+                  <div className="slide" key={alt}>
+                    <img src={src} alt={alt} />
+                    <div className="overlay">
+                      <div
+                        className={`fas fa-heart heart ${isActive ? "active" : ""}`}
+                        onClick={() => toggleHeart(alt)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <i
+                          className={` ${
+                            isActive ? "fa-solid" : "fa-regular"
+                          }`}
+                        ></i>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div class="slide">
-                <img src={brigadeiro4} alt="" />
-                <div class="overlay">
-                  <div class="heart-container">
-                    <i
-                      class="fas fa-heart heart"
-                      onclick="toggleHeart(this)"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slide">
-                      <img src={brigadeiro5} alt="" />
-                <div class="overlay">
-                  <div class="heart-container">
-                    <i
-                      class="fas fa-heart heart"
-                      onclick="toggleHeart(this)"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slide">
-                <img src={brigadeiro6} alt="" />
-                <div class="overlay">
-                  <div class="heart-container">
-                    <i
-                      class="fas fa-heart heart"
-                      onclick="toggleHeart(this)"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slide">
-                <img src={brigadeiro7} alt="" />
-                <div class="overlay">
-                  <div class="heart-container">
-                    <i
-                      class="fas fa-heart heart"
-                      onclick="toggleHeart(this)"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-              <div class="slide">
-                <img src={brigadeiro8} alt="" />
-                <div class="overlay">
-                  <div class="heart-container">
-                    <i
-                      class="fas fa-heart heart"
-                      onclick="toggleHeart(this)"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-              <div class="slide">
-                <img src={brigadeiro9} alt="" />
-                <div class="overlay">
-                  <div class="heart-container">
-                    <i
-                      class="fas fa-heart heart"
-                      onclick="toggleHeart(this)"
-                    ></i>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </section>
         </section>
 
-        <section class="section-galerias-geral d-grid gap-4 m-4">
-          <section class="section-galerias row">
-            {/* <img class="w-full h-48 object-cover" src="/imagens/brigadeiro 6.jfif" alt=""> */}
-            <div class="section-galerias-text">
+
+        <section className="section-galerias-geral">
+          <section className="section-galerias row">
+            <div className="section-galerias-text">
               <h5>Doces pra entrega</h5>
               <p> esses são meus doces e blá blá blá</p>
             </div>
           </section>
-          <section class="section-galerias row">
+          <section className="section-galerias row">
             <img src={docesentregas} alt="" />
-            <div class="section-galerias-text">
+            <div className="section-galerias-text">
               <h5>Doces pra entrega</h5>
               <p> esses são meus doces e blá blá blá</p>
             </div>
           </section>
-          <section class="section-galerias row">
+          <section className="section-galerias row">
             <img src={docesfestas} alt="" />
-            <div class="section-galerias-text">
+            <div className="section-galerias-text">
               <h5>Doces pra Festas</h5>
               <p> esses são meus doces e blá blá blá</p>
             </div>
           </section>
-          <section class="section-galerias row">
-            <img src="" alt="" />
-            <div class="section-galerias-text">
+          <section className="section-galerias row">
+            <img src={brigadeiro9} alt="" />
+            <div className="section-galerias-text">
               <h5>Doces de dias especiais</h5>
               <p>
                 {" "}

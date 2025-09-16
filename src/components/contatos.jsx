@@ -4,8 +4,8 @@ import video from "../img/video.mp4"
 function Contats() {
   return (
     <div>
-      <section class="contatos-sectionsprincipal" id="contatos">
-        <section class="sect-contatos">
+      <section className="contatos-sectionsprincipal" id="contatos">
+        <section className="sect-contatos">
           <h1>Contatos</h1>
           <section className="section-pattern-contatos rounded- p-5 p-md-4 w-100 shadow">
 <video
@@ -18,14 +18,14 @@ function Contats() {
             <section>
               <a
                 href="https://www.instagram.com/montcandy_/"
-                class="instagram-btn"
+                className="instagram-btn"
                 target="_blank"
               >
                 <i class="fa-brands fa-instagram fa-3x"></i>
                 Nos siga no instagram!!
               </a>
               <a href="#" class="whatsapp-btn" target="_blank">
-                <i class="fa-brands fa-whatsapp fa-3x"></i>
+                <i className="fa-brands fa-whatsapp fa-3x"></i>
                 Nos chame no whatsapp!!
               </a>
             </section>
