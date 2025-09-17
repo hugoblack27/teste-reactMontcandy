@@ -24,9 +24,8 @@ function Galeria() {
     { src: brigadeiro8, alt: "Brigadeiro 8" },
     { src: brigadeiro9, alt: "Brigadeiro 9" },
   ];
-  // Estado que guarda os alts das imagens favoritas
+  
   const [favorites, setFavorites] = useState({});
-  // Ao montar, carrega favoritos do localStorage
   useEffect(() => {
     const favs = {};
     slides.forEach(({ alt }) => {
@@ -36,7 +35,7 @@ function Galeria() {
     });
     setFavorites(favs);
   }, []);
-  // Função para alternar favorito
+
   function toggleHeart(alt) {
     setFavorites((prev) => {
       const newFavorites = { ...prev };
@@ -54,7 +53,7 @@ function Galeria() {
     <div>
       <section className="galeria" id="galeria">
         <h2 className="galeria-escrita">Galeria</h2>
-        <section className="section-pattern rounded-4 p-4 p-md-5 container-fluid w-100 shadow">
+        <section className="section-pattern rounded-4 p-md-5 container-fluid w-100 shadow">
           <section className="slideshow">
             <div className="slides">
               {slides.map(({ src, alt }) => {
