@@ -1,0 +1,26 @@
+.sobre-mim {
+  background-color: #dfb0bc;
+  padding: 140px 140px;
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  justify-content: center;
+}
+
+
+.foto-sobremim {
+  margin: 25px;
+}
+
+.foto-sobremim img {
+  width: 550px;
+  height: 550px;
+}
+
+.section-pattern {
+  background: linear-gradient(135deg, #ffffff 0%, #fffafa 100%);
+}
+
+.floating-shadow {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
