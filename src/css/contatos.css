@@ -12,6 +12,7 @@
   justify-content: center;
   border-radius: 15px;
   gap: 15px;
+  width: 100%;
 }
 
 .sect-contatos {
@@ -19,6 +20,9 @@
   gap: 75px;
   flex-direction: column;
   align-items: center;
+  width: 100%;       
+  max-width: 100%;   
+  box-sizing: border-box;
 }
 
 .sect-contatos h1 {
@@ -32,15 +36,13 @@
 }
 
 .instagram-btn {
-  background: linear-gradient(
-    45deg,
-    rgb(131, 58, 180),
-    rgb(193, 53, 132),
-    rgb(225, 48, 108),
-    rgb(253, 29, 29),
-    rgb(245, 96, 64),
-    rgb(252, 175, 69)
-  );
+  background: linear-gradient(45deg,
+      rgb(131, 58, 180),
+      rgb(193, 53, 132),
+      rgb(225, 48, 108),
+      rgb(253, 29, 29),
+      rgb(245, 96, 64),
+      rgb(252, 175, 69));
 
   display: flex;
   margin: 5px;
@@ -64,8 +66,8 @@
   transition: 2s;
 }
 
-.instagram-btn i{
-    color: #ffffff;
+.instagram-btn i {
+  color: #ffffff;
 }
 
 .instagram-btn:active {
@@ -106,30 +108,40 @@
 
 .video-contatos {
   width: 340px;
-  height: 240px controls= "controls" autoplay= "autoplay" muted;
+  height: 240px controls="controls"autoplay="autoplay"muted;
   border-radius: 15px;
 }
 
 
-@media only screen and (max-width: 600px){
-      .section-pattern-contatos{
+@media only screen and (max-width: 600px) {
+.section-pattern-contatos {
     flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
   }
 
-
-  .contatos-sectionsprincipal{
+  .contatos-sectionsprincipal {
     padding: 60px 20px;
   }
 
-  .whatsapp-btn{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  .sect-contatos {
+        gap: 30px;
+    width: 100%;    
+    max-width: 100%;  
   }
 
-  .instagram-btn{
+  .whatsapp-btn,
+  .instagram-btn {
+    display: flex; 
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
+    width: 100%; }
+
+    .video-contatos {
+  width: 310px;
+  height: 240px controls="controls"autoplay="autoplay"muted;
+  border-radius: 15px;
+}
 }

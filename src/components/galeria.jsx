@@ -84,6 +84,7 @@ function Galeria() {
 
         <section className="section-galerias-geral">
           <section className="section-galerias row">
+            <img src={brigadeiro7} alt="" />
             <div className="section-galerias-text">
               <h5>Doces pra entrega</h5>
               <p> esses são meus doces e blá blá blá</p>
