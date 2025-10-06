@@ -40,13 +40,10 @@ function SobreMim() {
           className="fw-bold text-dark mb-4 fs-3"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          Da Tradição à Inovação
+          Doce Sonho: A Jornada da Mont' Candy
         </h3>
-        <p className="text-secondary mb-4">
-          Cada doce que crio carrega a herança das receitas de família que
-          aprendi com minha avó, combinada com técnicas modernas de
-          confeitaria francesa. Minha missão é transformar ingredientes
-          simples em experiências gustativas memoráveis.
+        <p className="text-secondary mb-4" style={{textAlign:"justify"}}>
+         Desde criança, desenvolvi paixão por vendas e independência, transformando criatividade em oportunidades. Em 2023, com apoio da família, iniciei a Mont’ Candy vendendo brigadeiros e, aos poucos, assumi o negócio sozinha, conciliando escola, produção e planejamento. Hoje, aos 19 anos, cuido de tudo: compras, produção, decoração e entregas. Apesar dos desafios, sigo com dedicação, leveza e amor, construindo uma história curta, mas marcante de superação e crescimento.
         </p>
 
        

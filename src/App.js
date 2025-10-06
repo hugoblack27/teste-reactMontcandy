@@ -8,7 +8,6 @@ import SobreMim from './components/sobremim';
 function App() {
   return (
     <div>
-
 <Header/>
 <Fotomain/>
 <SobreMim/>

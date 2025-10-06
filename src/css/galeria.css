@@ -133,22 +133,54 @@
 
 
 
-.section-galerias {
-  background: linear-gradient(115deg, #dfb0bc 5%, #fffafa 100%);
-  width: 320px;
-  height: 375px;
-  display: grid;
-  border-radius: 15px;
-  box-shadow: 2px 8px 9px rgba(0, 0, 0, 0.4);
-  flex-direction: column;
-  gap: 45px;
-  text-align: justify;
-  overflow: hidden;
-}
+        .section-galerias {
+          background: linear-gradient(115deg, #dfb0bc 5%, #fffafa 100%);
+          width: 320px;
+          height: 375px;
+          display: flex;
+          flex-direction: column;
+          border-radius: 15px;
+          box-shadow: 2px 8px 9px rgba(0, 0, 0, 0.4);
+          gap: 20px;
+          overflow: hidden;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          margin: 20px auto;
+        }
 
-.section-galerias-text {
-  margin-left: 15px;
-}
+        .section-galerias img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          max-height: 200px;
+          object-fit: cover;
+           box-shadow: 2px 6px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-galerias-text {
+          text-align: center;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 10px;
+        }
+
+        .section-galerias-text h5 {
+          text-align: center;
+          margin: 0 0 10px 0;
+          font-size: 1.2em;
+        }
+
+        .section-galerias-text p {
+          text-align: justify;
+          margin: 0;
+          line-height: 1.4;
+          font-size: 0.9em;
+        }
+
 
 .section-galerias img {
   width: 150%;
@@ -250,4 +282,19 @@
   .section-pattern{
     padding: 0.5rem;
   }
+          .section-galerias {
+          background: linear-gradient(115deg, #dfb0bc 5%, #fffafa 100%);
+          width: 297px;
+          height: 375px;
+          display: flex;
+          flex-direction: column;
+          border-radius: 15px;
+          box-shadow: 2px 8px 9px rgba(0, 0, 0, 0.4);
+          gap: 20px;
+          overflow: hidden;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          margin: 20px auto;
+        }
 }

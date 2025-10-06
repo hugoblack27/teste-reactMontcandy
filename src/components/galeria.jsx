@@ -101,7 +101,7 @@ function Galeria() {
             <img src={docesfestas} alt="" />
             <div className="section-galerias-text">
               <h5>Doces pra Festas</h5>
-              <p> esses são meus doces e blá blá blá</p>
+              <p>Tambem adoçamos sua festa com os nossos doces!! </p>
             </div>
           </section>
           <section className="section-galerias row">
@@ -109,7 +109,6 @@ function Galeria() {
             <div className="section-galerias-text">
               <h5>Doces de dias especiais</h5>
               <p>
-                {" "}
                 esses são meus doces e blá blá
                 blásadojasiojdasjkldjklasjdlkjaskldjklsajdkljaslidkos
                 lsakjdlksajdlkasjkldj
