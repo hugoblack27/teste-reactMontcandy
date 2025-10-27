@@ -86,7 +86,7 @@ function Galeria() {
           <section className="section-galerias row">
             <img src={brigadeiro7} alt="" />
             <div className="section-galerias-text">
-              <h5>Doce, leve e frutado! 🍓</h5>
+              <h5>Doce, leve e frutado! </h5>
               <p> Sabores que encantam e refrescam a cada mordida!</p>
             </div>
           </section>
@@ -94,7 +94,7 @@ function Galeria() {
             <img src={docesentregas} alt="" />
             <div className="section-galerias-text">
               <h5>Todo dia festivo merece um toque de doçura!</h5>
-              <p>De Natal a aniversários, a Mont’ Candy está pronta pra adoçar seus melhores momentos com nossos sabores irresistíveis!</p>
+              <p>De Natal a aniversários, a Mont Candy está pronta pra adoçar seus melhores momentos com nossos sabores irresistíveis!</p>
             </div>
           </section>
 
@@ -102,13 +102,13 @@ function Galeria() {
             <img src={docesfestas} alt="" />
             <div className="section-galerias-text">
               <h5>Doces pra Festas</h5>
-              <p>Cada festa merece um toque de doçura… e nós levamos isso até você! 🍭 </p>
+              <p>Cada festa merece um toque de doçura… e nós levamos isso até você!  </p>
             </div>
           </section>
           <section className="section-galerias row">
             <img src={brigadeiro9} alt="" />
             <div className="section-galerias-text">
-              <h5>Um dia triste? Deixe a doçura cuidar disso! 💖</h5>
+              <h5>Um dia triste? Deixe a doçura cuidar disso! </h5>
               <p>
                 Conheça nossos doces de vários sabores e adoçe seu momento.
               </p>
